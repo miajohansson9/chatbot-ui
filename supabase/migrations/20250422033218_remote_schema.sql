@@ -46,7 +46,7 @@ CREATE OR REPLACE FUNCTION public.delete_storage_object(bucket text, object text
 AS $function$
 DECLARE
   project_url TEXT := 'https://krbbjarmgqkykgrlfedr.supabase.co';
-  service_role_key TEXT := 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtyYmJqYXJtZ3FreWtncmxmZWRyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NDQ5NzQzNiwiZXhwIjoyMDYwMDczNDM2fQ.pihh7mvc7Hb78lnG0oI2r9ULmW_TrzSfu8X8OY_NRqg'; -- full access needed for http request to storage
+  service_role_key TEXT := ''; -- full access needed for http request to storage
   url TEXT := project_url || '/storage/v1/object/' || bucket || '/' || object;
 BEGIN
   SELECT
